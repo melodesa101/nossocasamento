@@ -140,7 +140,8 @@ function sendMessage(event) {
                 mensagem: message
             })
         }).then(() => {
-            alert("Mensagem enviada com sucesso!");
+            alert(`Obrigado, ${name}! Sua mensagem foi enviada aos noivos:
+\n"${message}"`);
             document.getElementById("message-form").reset();
         }).catch(() => {
             alert("Houve um problema ao enviar a mensagem. Tente novamente.");
