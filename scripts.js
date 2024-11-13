@@ -115,3 +115,34 @@ function filterByPrice() {
     giftList.innerHTML = '';
     cards.forEach(card => giftList.appendChild(card));
 }
+
+function sendGiftDetails() {
+    const itemName = document.getElementById('item-name').innerText;
+    const itemPrice = document.getElementById('item-price').innerText;
+    const userMessage = document.getElementById('user-message').value;
+
+    if (!userMessage) {
+        alert('Por favor, escreva uma mensagem antes de enviar.');
+        return;
+    }
+
+    // Inicialize EmailJS (coloque sua chave pública e ID do serviço)
+    emailjs.init('dbhAaRFF6caI-Jw-7');
+
+    // Parâmetros para enviar o e-mail
+    const emailParams = {
+        item_name: itemName,
+        item_price: itemPrice,
+        user_message: userMessage
+    };
+
+    // Envio do e-mail
+    emailjs.send('service_1m2huid', 'template_n67bdnn', emailParams)
+        .then(() => {
+            alert('Mensagem enviada com sucesso!');
+        }, (error) => {
+            console.error('Erro ao enviar mensagem:', error);
+            alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+        });
+}
+
