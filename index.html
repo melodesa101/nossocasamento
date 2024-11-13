@@ -248,7 +248,7 @@
     document.getElementById('guestDetails').style.display = isAllGoing ? 'none' : 'block';
   }
 
-  function enviarParaPlanilha() {
+  function enviarParaPlanilha(event) {
   event.preventDefault(); // Impede o comportamento padrão do botão.
 
   // Capture os dados do formulário
@@ -279,12 +279,11 @@
     absentGuests: allGoing === 'Sim' ? '' : absentGuests
   };
 
-  // URL do proxy CORS (use com cuidado)
-  var proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Pode ser trocado por outro proxy.
+  // URL do seu Google Apps Script sem o proxy
   var scriptUrl = 'https://script.google.com/macros/s/AKfycbyiNlAd-rEiTUdOSfHuiojBr20n0bUbTP1NCVK6cVRSYRxxfqDz25-S6knndTFcXRJXrA/exec';
 
-  // Envia a solicitação POST ao Google Apps Script através do proxy
-  fetch(proxyUrl + scriptUrl, {
+  // Envia a solicitação POST ao Google Apps Script
+  fetch(scriptUrl, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
@@ -304,6 +303,7 @@
     alert('Ocorreu um erro ao enviar os dados. Verifique o console para mais detalhes.');
   });
 }
+
 </script>
 
 <div class="ww-section bg-light" id="gallery">
