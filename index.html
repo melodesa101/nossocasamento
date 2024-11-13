@@ -28,7 +28,6 @@
     <link href="css/ekko-lightbox.css?ver=1.1.0" rel="stylesheet">
     <link href="css/main.css?ver=1.1.0" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body id="top">
     <header></header>
@@ -125,19 +124,14 @@
     </div>
   </div>
 </div>
-<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
-
-<!-- A sua seção de Lista de Presentes -->
 <div class="ww-section" id="gifts">
   <div class="container ww-wedding-gifts">
-    <h2 class="h1 text-center pt-3 ww-title" style="font-size: 2rem;">
-      Lista de Presentes
-    </h2>
+    <h2 class="h1 text-center pt-3 ww-title" style="font-size: 2rem;">Lista de Presentes</h2>
     <br>
     <div class="row">
       <div class="col-12 mb-4">
         <a href="lista-casamento.html" target="_blank">
-          <img src="images/presente.png" alt="" style="width: 50%; max-width: 500px; height: auto; border-radius: 14px; display: block; margin: 0 auto; margin-bottom: 10px;">
+          <img src="images/presente.png" alt="" style="width: 100%; max-width: 500px; height: auto; border-radius: 14px; display: block; margin: 0 auto; margin-bottom: 10px;">
         </a>
       </div>
       <div class="col-12 mb-4 text-center">
@@ -156,126 +150,27 @@
       </div>
     </div>
   </div>
-  <!-- Confetes no fundo -->
-  <div class="confetti-container">
-    <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="confetti" style="left: 20%; animation-delay: 1s;"></div>
-    <div class="confetti" style="left: 30%; animation-delay: 2s;"></div>
-    <div class="confetti" style="left: 40%; animation-delay: 1s;"></div>
-    <div class="confetti" style="left: 50%; animation-delay: 0s;"></div>
-    <div class="confetti" style="left: 60%; animation-delay: 2s;"></div>
-    <div class="confetti" style="left: 70%; animation-delay: 1s;"></div>
-    <div class="confetti" style="left: 80%; animation-delay: 0s;"></div>
-    <div class="confetti" style="left: 90%; animation-delay: 1s;"></div>
-  </div>
 </div>
 
-<!-- Script para inicializar o particles.js -->
-<script>
-  particlesJS('particles-js', {
-    "particles": {
-      "number": {
-        "value": 100,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#f1c40f" // Cor dos confetes
-      },
-      "shape": {
-        "type": "circle"
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 0.5
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 3,
-          "size_min": 0.1
-        }
-      },
-      "line_linked": {
-        "enable": false
-      },
-      "move": {
-        "enable": true,
-        "speed": 1,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        }
-      }
-    }
-  });
-</script>
-
-<style>
-  /* Confetes */
-  .confetti {
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background-color: #f1c40f;
-    animation: confetti 3s infinite;
-  }
-
-  @keyframes confetti {
-    0% {
-      transform: translateY(-100px) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-
-  /* Criação de confetes aleatórios */
-  .confetti:nth-child(odd) {
-    background-color: #e74c3c;
-    animation-duration: 4s;
-    animation-delay: -1s;
-  }
-
-  .confetti:nth-child(even) {
-    background-color: #2ecc71;
-    animation-duration: 4.5s;
-    animation-delay: -2s;
-  }
-
-  /* Função para gerar confetes */
-  .confetti-container {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-  }
-</style>
+<!-- Modal de Confirmação de Cópia -->
+<div class="modal fade" id="copiedModal" tabindex="-1" role="dialog" aria-labelledby="copiedModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="copiedModalLabel">Pix Copiado!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="font-size: small;">
+        Chave PIX copiada para a área de transferência!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #233769; border: none;">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   function copyChavePix() {
