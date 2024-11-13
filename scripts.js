@@ -119,8 +119,8 @@ function filterByPrice() {
 function sendMessage(event) {
     event.preventDefault();
     
-    const name = document.getElementById("name").value;
-    const gift = document.getElementById("gift").value;
+    const name = document.getElementById("sender-name").value;
+    const itemName = document.getElementById("item-name").textContent;
     const message = document.getElementById("message").value;
 
     fetch('https://script.google.com/macros/s/AKfycbwQAr_XhQa8JzP8SLhN7ZGPzzKwozOr-QoW3YaMgZgAlHxhaZfHDqI8RPskMIK-Ei4/exec', {
@@ -131,18 +131,14 @@ function sendMessage(event) {
         },
         body: JSON.stringify({
             nome: name,
-            presente: gift,
+            presente: itemName,
             mensagem: message
         })
     }).then(() => {
         alert("Mensagem enviada com sucesso!");
-        closeModal();
-    }).catch(error => {
-        console.error("Erro ao enviar a mensagem:", error);
-        alert("Ocorreu um erro ao enviar a mensagem.");
+        document.getElementById("message-form").reset();
+    }).catch(() => {
+        alert("Houve um problema ao enviar a mensagem. Tente novamente.");
     });
 }
 
-function closeModal() {
-    document.getElementById("gift-modal").style.display = "none";
-}
