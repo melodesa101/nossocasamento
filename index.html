@@ -189,86 +189,45 @@
   }
 </script>
 
-<div class="ww-section ww-rsvp-detail text-white" id="rsvp">
+<div class="ww-section ww-rsvp-detail text-dark" id="rsvp">
   <div class="container">
     <div class="col text-center">
-      <h2 class="h1 ww-title pb-3" style="font-size: 2rem; padding-top: 10%;">Confirmar Presença</h2>
+      <h2 class="h1 ww-title">Confirmar Presença</h2>
     </div>
     <div class="row ww-rsvp-form justify-content-center">
-      <div class="col-md-10 col-lg-8">
+      <div class="col-md-8">
         <div class="card-body">
           <form id="confirmationForm" action="#" method="POST">
-            <div class="row">
-              <div class="col-md-6">
+            <div class="row pb-3">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="respondent-name">Nome do Respondente*</label>
-                  <input class="form-control" type="text" id="respondentName" name="respondentName" required="required"/>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Todos os convidados irão?</label>
-                  <div class="d-flex">
-                    <div class="form-check me-3">
-                      <input class="form-check-input" type="radio" name="allGoing" value="Sim" id="allGoingYes" onclick="toggleGuestDetails(true)" required>
-                      <label class="form-check-label" for="allGoingYes">Sim</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="allGoing" value="Não" id="allGoingNo" onclick="toggleGuestDetails(false)">
-                      <label class="form-check-label" for="allGoingNo">Não</label>
-                    </div>
-                  </div>
+                  <input class="form-control" type="text" id="respondentName" name="respondentName" required="required" placeholder="Digite seu nome"/>
                 </div>
               </div>
             </div>
-            <div id="guestDetails" class="row" style="display: none;">
-              <div class="d-flex">
-                <div class="col-md-6 pb-3">
-                  <div class="form-group">
-                    <label for="attending-guests">Nomes dos que irão:</label>
-                    <input class="form-control" type="text" id="attendingGuests" placeholder="Separe os nomes por vírgulas"/>
-                  </div>
-                </div>
-                <div class="col-md-6 pb-3">
-                  <div class="form-group">
-                    <label for="absent-guests">Nomes dos que não irão:</label>
-                    <input class="form-control" type="text" id="absentGuests" placeholder="Separe os nomes por vírgulas"/>
-                  </div>
-                </div>
+            <div class="form-group pb-3">
+              <label>Todos os convidados irão?</label><br>
+              <input type="radio" name="allGoing" value="Sim" onclick="toggleGuestDetails(true)" required> Sim
+              <input type="radio" name="allGoing" value="Não" onclick="toggleGuestDetails(false)"> Não
+            </div>
+            <div id="guestDetails" style="display: none;">
+              <div class="form-group pb-3">
+                <label for="attending-guests">Nomes dos que irão:</label>
+                <input class="form-control" type="text" id="attendingGuests" placeholder="Separe os nomes por vírgulas"/>
+              </div>
+              <div class="form-group pb-3">
+                <label for="absent-guests">Nomes dos que não irão:</label>
+                <input class="form-control" type="text" id="absentGuests" placeholder="Separe os nomes por vírgulas"/>
               </div>
             </div>
             <div class="row">
               <div class="col text-center">
-                <button class="btn btn-primary w-100" type="button" onclick="enviarParaPlanilha(event)">Confirmar Presença e Enviar</button>
+                <button class="btn btn-primary" type="button" onclick="enviarParaPlanilha(event)">Confirmar Presença e Enviar</button>
               </div>
             </div>
           </form>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal de Confirmação -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="confirmationModalLabel">Confirmação</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Sua resposta foi enviada com sucesso!</p>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="checkRealizado">
-          <label class="form-check-label" for="checkRealizado">
-            Marcar como realizado
-          </label>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" onclick="finalizarConfirmacao()">Confirmar</button>
       </div>
     </div>
   </div>
@@ -317,26 +276,12 @@
       body: JSON.stringify(data),
     })
     .then(() => {
-      // Exibe o modal após o envio bem-sucedido
-      var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-      confirmationModal.show();
+      alert('Sua resposta foi enviada, muito obrigado!');
     })
     .catch(error => {
       console.error('Erro:', error);
       alert('Ocorreu um erro ao enviar os dados. Verifique o console para mais detalhes.');
     });
-  }
-
-  function finalizarConfirmacao() {
-    var isChecked = document.getElementById('checkRealizado').checked;
-    if (isChecked) {
-      alert('Recebos sua resposta, obrigado!');
-    } else {
-      alert('Você ainda não confirmou a resposta.');
-    }
-    // Fechar o modal
-    var confirmationModal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
-    confirmationModal.hide();
   }
 </script>
 
