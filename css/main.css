@@ -290,6 +290,26 @@ body::-webkit-scrollbar-corner {
   }
 }
 
+.card-body {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.ww-rsvp-form {
+  margin-top: 30px;
+}
+
+.ww-rsvp-form .form-group {
+  margin-bottom: 20px;
+}
+
 .ww-rsvp-form input[type="radio"] {
   margin-right: 10px;
 }
