@@ -249,6 +249,31 @@
   </div>
 </div>
 
+<!-- Modal de Confirmação -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmationModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Sua resposta foi enviada com sucesso!</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkRealizado">
+          <label class="form-check-label" for="checkRealizado">
+            Marcar como realizado
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" onclick="finalizarConfirmacao()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   function toggleGuestDetails(isAllGoing) {
     document.getElementById('guestDetails').style.display = isAllGoing ? 'none' : 'block';
@@ -292,12 +317,26 @@
       body: JSON.stringify(data),
     })
     .then(() => {
-      alert('Sua resposta foi enviada, muito obrigado!');
+      // Exibe o modal após o envio bem-sucedido
+      var confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+      confirmationModal.show();
     })
     .catch(error => {
       console.error('Erro:', error);
       alert('Ocorreu um erro ao enviar os dados. Verifique o console para mais detalhes.');
     });
+  }
+
+  function finalizarConfirmacao() {
+    var isChecked = document.getElementById('checkRealizado').checked;
+    if (isChecked) {
+      alert('Recebos sua resposta, obrigado!');
+    } else {
+      alert('Você ainda não confirmou a resposta.');
+    }
+    // Fechar o modal
+    var confirmationModal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
+    confirmationModal.hide();
   }
 </script>
 
