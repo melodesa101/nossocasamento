@@ -128,7 +128,7 @@ function sendMessage(event) {
     const message = document.getElementById("message")?.value;
 
     if (name && itemName && message) {
-        fetch('https://script.google.com/macros/s/AKfycbwqlTwLAMmpwQN6fUOqqLsQmoqkBtb8SIcIUliatGIn6AbTBrNHgbAaMAtYHx_JJjvA/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbzZr9wNsTwOfkCNV-g_g_KNk1ClQdTP7QITgkJhBKiHEC7sndd68BiGujr6LmiWuX1e/exec', {
             method: 'POST',
             mode: 'no-cors',
             headers: {
