@@ -116,29 +116,37 @@ function filterByPrice() {
     cards.forEach(card => giftList.appendChild(card));
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("message-form").onsubmit = sendMessage;
+});
+
 function sendMessage(event) {
     event.preventDefault();
-    
-    const name = document.getElementById("sender-name").value;
-    const itemName = document.getElementById("item-name").textContent;
-    const message = document.getElementById("message").value;
 
-    fetch('https://script.google.com/macros/s/AKfycbwQAr_XhQa8JzP8SLhN7ZGPzzKwozOr-QoW3YaMgZgAlHxhaZfHDqI8RPskMIK-Ei4/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            nome: name,
-            presente: itemName,
-            mensagem: message
-        })
-    }).then(() => {
-        alert("Mensagem enviada com sucesso!");
-        document.getElementById("message-form").reset();
-    }).catch(() => {
-        alert("Houve um problema ao enviar a mensagem. Tente novamente.");
-    });
+    const name = document.getElementById("sender-name")?.value;
+    const itemName = document.getElementById("item-name")?.textContent;
+    const message = document.getElementById("message")?.value;
+
+    if (name && itemName && message) {
+        fetch('https://script.google.com/macros/s/AKfycbwQAr_XhQa8JzP8SLhN7ZGPzzKwozOr-QoW3YaMgZgAlHxhaZfHDqI8RPskMIK-Ei4/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nome: name,
+                presente: itemName,
+                mensagem: message
+            })
+        }).then(() => {
+            alert("Mensagem enviada com sucesso!");
+            document.getElementById("message-form").reset();
+        }).catch(() => {
+            alert("Houve um problema ao enviar a mensagem. Tente novamente.");
+        });
+    } else {
+        alert("Por favor, preencha todos os campos.");
+    }
 }
 
