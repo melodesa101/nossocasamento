@@ -343,3 +343,12 @@ body::-webkit-scrollbar-corner {
 #guestDetails {
   margin-top: 20px;
 }
+
+.ww-wedding-gifts img {
+  transition: transform 0.3s ease;
+}
+
+.ww-wedding-gifts img:hover {
+  transform: scale(1.05); /* Aumenta o tamanho da imagem */
+}
+

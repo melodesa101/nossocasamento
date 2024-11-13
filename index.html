@@ -28,6 +28,7 @@
     <link href="css/ekko-lightbox.css?ver=1.1.0" rel="stylesheet">
     <link href="css/main.css?ver=1.1.0" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body id="top">
     <header></header>
@@ -126,26 +127,28 @@
 </div>
 <div class="ww-section" id="gifts">
   <div class="container ww-wedding-gifts">
-    <h2 class="h1 text-center pt-3 ww-title" style="font-size: 2rem;">Lista de Presentes</h2>
+    <h2 class="h1 text-center pt-3 ww-title" style="font-size: 2rem;" data-aos="fade-up" data-aos-duration="1000">
+      Lista de Presentes
+    </h2>
     <br>
     <div class="row">
-      <div class="col-12 mb-4">
+      <div class="col-12 mb-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
         <a href="lista-casamento.html" target="_blank">
           <img src="images/presente.png" alt="" style="width: 50%; max-width: 500px; height: auto; border-radius: 14px; display: block; margin: 0 auto; margin-bottom: 10px;">
         </a>
       </div>
-      <div class="col-12 mb-4 text-center">
+      <div class="col-12 mb-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
         <p>Ao tocar na lista de presentes acima, você será redirecionado para ela, <strong>basta tocar na imagem!</strong></p>
         <hr style="height: 2px; border: none; background-color: #333; margin: 20px 0;">
       </div>
-      <div class="col-12 mb-4 text-center">
+      <div class="col-12 mb-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
         <img src="images/Chave pix.jpeg" alt="" style="width: 100%; max-width: 200px; height: auto; border-radius: 14px; display: block; margin: 0 auto; margin-bottom: 10px;">
         <p><strong>Chave PIX: </strong><span id="chavePixText">melodesa101@gmail.com</span></p>
         <button class="btn btn-primary" onclick="copyChavePix()">
           <i class="fas fa-copy"></i> Copiar
         </button>
       </div>         
-      <div class="col-12 mb-4 text-center">
+      <div class="col-12 mb-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
         <p>Aperte o botão<big><b> Copiar</b></big> acima, para pegar a chave PIX ou escaneie o <big><b>QR Code</b></big>, caso deseje nos enviar algum valor.</p>
       </div>
     </div>
@@ -171,6 +174,12 @@
     </div>
   </div>
 </div>
+<!-- Adicionando o JS da biblioteca AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Inicializando a biblioteca AOS
+  AOS.init();
+</script>
 
 <script>
   function copyChavePix() {
