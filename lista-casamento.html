@@ -308,6 +308,22 @@
             </div>
         </div>
     </div>
+    <div id="gift-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Envie uma mensagem aos noivos</h2>
+            <form id="gift-form" onsubmit="sendMessage(event)">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" required>
+                <label for="gift">Presente:</label>
+                <input type="text" id="gift" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
 </body>
 </html>

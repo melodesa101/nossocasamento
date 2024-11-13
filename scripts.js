@@ -115,3 +115,34 @@ function filterByPrice() {
     giftList.innerHTML = '';
     cards.forEach(card => giftList.appendChild(card));
 }
+
+function sendMessage(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const gift = document.getElementById("gift").value;
+    const message = document.getElementById("message").value;
+
+    fetch('https://script.google.com/macros/s/AKfycbwQAr_XhQa8JzP8SLhN7ZGPzzKwozOr-QoW3YaMgZgAlHxhaZfHDqI8RPskMIK-Ei4/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome: name,
+            presente: gift,
+            mensagem: message
+        })
+    }).then(() => {
+        alert("Mensagem enviada com sucesso!");
+        closeModal();
+    }).catch(error => {
+        console.error("Erro ao enviar a mensagem:", error);
+        alert("Ocorreu um erro ao enviar a mensagem.");
+    });
+}
+
+function closeModal() {
+    document.getElementById("gift-modal").style.display = "none";
+}
