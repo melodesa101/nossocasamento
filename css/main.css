@@ -299,6 +299,30 @@ body::-webkit-scrollbar-corner {
   }
 }
 
+.card-body {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
 
 .ww-rsvp-form {
   margin-top: 30px;
