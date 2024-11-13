@@ -249,8 +249,8 @@
   }
 
   function enviarParaPlanilha() {
-  event.preventDefault(); // Verifique se `event` está sendo passado corretamente.
-  
+  event.preventDefault(); // Impede o comportamento padrão do botão.
+
   // Capture os dados do formulário
   var respondentName = document.getElementById('respondentName').value.trim();
   if (!respondentName) {
@@ -279,8 +279,12 @@
     absentGuests: allGoing === 'Sim' ? '' : absentGuests
   };
 
-  // Envia a solicitação POST ao Google Apps Script
-  fetch('https://script.google.com/macros/s/AKfycbyiNlAd-rEiTUdOSfHuiojBr20n0bUbTP1NCVK6cVRSYRxxfqDz25-S6knndTFcXRJXrA/exec', {
+  // URL do proxy CORS (use com cuidado)
+  var proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // Pode ser trocado por outro proxy.
+  var scriptUrl = 'https://script.google.com/macros/s/AKfycbyiNlAd-rEiTUdOSfHuiojBr20n0bUbTP1NCVK6cVRSYRxxfqDz25-S6knndTFcXRJXrA/exec';
+
+  // Envia a solicitação POST ao Google Apps Script através do proxy
+  fetch(proxyUrl + scriptUrl, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
