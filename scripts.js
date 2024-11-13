@@ -116,33 +116,71 @@ function filterByPrice() {
     cards.forEach(card => giftList.appendChild(card));
 }
 
-function sendGiftDetails() {
+function openModal(id) {
+    const item = document.querySelector(`.card[data-id="${id}"]`);
+    const itemName = item.querySelector('h2').innerText;
+    const itemPrice = item.querySelector('p').innerText.split(' ')[1];
+
+    document.getElementById('item-name').innerText = itemName;
+    document.getElementById('item-price').innerText = itemPrice;
+
+    const preferenceId = getPreferenceId(id);
+
+    const buttonContainer = document.getElementById('mercado-pago-button-container');
+    buttonContainer.innerHTML = '';
+    
+    const script = document.createElement('script');
+    script.src = `https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js`;
+    script.dataset.preferenceId = preferenceId;
+    script.dataset.source = 'button';
+    script.async = true;
+    buttonContainer.appendChild(script);
+
+    document.getElementById('modal').style.display = "block";
+
+    // Simula o retorno do pagamento para fins de demonstração
+    script.onload = function() {
+        // Monitore o clique no botão de pagamento e mostre a mensagem
+        script.onclick = function() {
+            setTimeout(() => {
+                // Simular um tempo de espera após o pagamento ser confirmado
+                document.getElementById('modal').style.display = 'none';
+                document.getElementById('custom-message-modal').style.display = 'block';
+            }, 5000); // Ajuste o tempo conforme necessário
+        };
+    };
+}
+
+function closeCustomModal() {
+    document.getElementById('custom-message-modal').style.display = 'none';
+}
+
+function sendEmailWithMessage() {
+    const message = document.getElementById('custom-message').value;
     const itemName = document.getElementById('item-name').innerText;
     const itemPrice = document.getElementById('item-price').innerText;
-    const userMessage = document.getElementById('user-message').value;
 
-    if (!userMessage) {
+    if (!message) {
         alert('Por favor, escreva uma mensagem antes de enviar.');
         return;
     }
 
-    // Inicialize EmailJS (coloque sua chave pública e ID do serviço)
     emailjs.init('dbhAaRFF6caI-Jw-7');
 
-    // Parâmetros para enviar o e-mail
     const emailParams = {
         item_name: itemName,
         item_price: itemPrice,
-        user_message: userMessage
+        user_message: message
     };
 
-    // Envio do e-mail
     emailjs.send('service_1m2huid', 'template_n67bdnn', emailParams)
         .then(() => {
             alert('Mensagem enviada com sucesso!');
+            closeCustomModal();
         }, (error) => {
             console.error('Erro ao enviar mensagem:', error);
             alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
         });
 }
+
 

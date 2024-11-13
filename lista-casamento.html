@@ -306,12 +306,18 @@
             <div id="mercado-pago-button-container">
                 <!-- O botão do Mercado Pago será inserido aqui pelo JavaScript -->
             </div>
-            <textarea id="user-message" placeholder="Escreva uma mensagem personalizada"></textarea>
-            <button onclick="sendGiftDetails()">Enviar Mensagem</button>
-
         </div>
     </div>
-    
+    <!-- Modal de mensagem personalizada -->
+    <div id="custom-message-modal" class="modal1">
+        <div class="modal1-content">
+            <span class="close" onclick="closeCustomModal()">&times;</span>
+            <h2>Envie uma mensagem aos noivos</h2>
+            <textarea id="custom-message" placeholder="Digite sua mensagem aqui..."></textarea>
+            <button onclick="sendEmailWithMessage()">Enviar Mensagem</button>
+        </div>
+    </div>
+
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="scripts.js"></script>
