@@ -249,46 +249,57 @@
   }
 
   function enviarParaPlanilha() {
-    event.preventDefault();
-    
-    var respondentName = document.getElementById('respondentName').value.trim();
-    var allGoing = document.querySelector('input[name="allGoing"]:checked').value;
-    var attendingGuests = document.getElementById('attendingGuests').value.trim();
-    var absentGuests = document.getElementById('absentGuests').value.trim();
-    var guestFields = document.querySelectorAll('#additionalFields [name="guestName"]');
-    var guestNames = [];
-
-    guestFields.forEach(function(field) {
-      guestNames.push(field.value.trim());
-    });
-
-    // Cria o objeto para enviar ao Google Apps Script
-    var data = {
-      respondentName: respondentName,
-      allGoing: allGoing,
-      guestNames: guestNames.join(", "),
-      attendingGuests: allGoing === 'Sim' ? guestNames.join(", ") : attendingGuests,
-      absentGuests: allGoing === 'Sim' ? '' : absentGuests
-    };
-
-    // Envia os dados para o script
-    fetch('https://script.google.com/macros/s/AKfycbyiNlAd-rEiTUdOSfHuiojBr20n0bUbTP1NCVK6cVRSYRxxfqDz25-S6knndTFcXRJXrA/exec', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.status === 'success') {
-        alert('Presença confirmada e enviada para a planilha!');
-      } else {
-        alert('Erro ao enviar os dados.');
-      }
-    })
-    .catch(error => console.error('Erro:', error));
+  event.preventDefault(); // Verifique se `event` está sendo passado corretamente.
+  
+  // Capture os dados do formulário
+  var respondentName = document.getElementById('respondentName').value.trim();
+  if (!respondentName) {
+    alert('Por favor, preencha o nome do respondente.');
+    return;
   }
+
+  var allGoingElement = document.querySelector('input[name="allGoing"]:checked');
+  if (!allGoingElement) {
+    alert('Por favor, indique se todos os convidados irão.');
+    return;
+  }
+
+  var allGoing = allGoingElement.value;
+  var attendingGuests = document.getElementById('attendingGuests').value.trim();
+  var absentGuests = document.getElementById('absentGuests').value.trim();
+
+  // Cria o objeto de dados para enviar
+  var data = {
+    respondentName: respondentName,
+    allGoing: allGoing,
+    guestNames: Array.from(document.querySelectorAll('#additionalFields [name="guestName"]'))
+                      .map(field => field.value.trim())
+                      .join(", "),
+    attendingGuests: allGoing === 'Sim' ? '' : attendingGuests,
+    absentGuests: allGoing === 'Sim' ? '' : absentGuests
+  };
+
+  // Envia a solicitação POST ao Google Apps Script
+  fetch('https://script.google.com/macros/s/AKfycbyiNlAd-rEiTUdOSfHuiojBr20n0bUbTP1NCVK6cVRSYRxxfqDz25-S6knndTFcXRJXrA/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      alert('Presença confirmada e enviada para a planilha!');
+    } else {
+      alert('Erro ao enviar os dados.');
+    }
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+    alert('Ocorreu um erro ao enviar os dados. Verifique o console para mais detalhes.');
+  });
+}
 </script>
 
 <div class="ww-section bg-light" id="gallery">
