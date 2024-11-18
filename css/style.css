@@ -1,0 +1,1665 @@
+body {
+    font-family: 'Open sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+
+}
+
+/* Estilos para o scrollbar do WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+    width: 6px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilos para o botão de rolagem */
+  body::-webkit-scrollbar-thumb {
+    background-color: #233769; /* Cor do botão de rolagem */
+    border-radius: 2px; /* Borda arredondada do botão de rolagem */
+  }
+  
+  /* Estilos para a área de rolagem que não está coberta pelo botão de rolagem */
+  body::-webkit-scrollbar-track {
+    background-color: #eee; /* Cor de fundo da área de rolagem */
+    border-radius: 2px; /* Borda arredondada da área de rolagem */
+  }
+  
+  /* Estilos para os cantos do scrollbar */
+  body::-webkit-scrollbar-corner {
+    background-color: transparent; /* Cor de fundo dos cantos do scrollbar */
+  }
+
+
+
+/*stickey nav*/
+
+.bg-transparent {
+    background-color: #ffffff !important;
+    box-shadow: -4px 0px 2px #21346a;
+}
+
+
+
+.navbar {
+    padding: 10px 50px;
+    background: transparent;
+}
+
+
+
+.navbar .navbar-brand {
+
+    font-family: 'Open sans', sans-serif;
+    padding: 5px 0px;
+    color: #fff;
+
+    font-size: 30px;
+}
+
+.navbar img {
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 39px;
+    position: relative;
+    top: -3px;
+}
+
+.navbar .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-brand:hover .fa-heartbeat {
+    color: #d01616;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav li {
+    font-weight: 600;
+
+    font-size: 14px;
+    font-family: 'Open sans', sans-serif;
+    padding-right: 10px;
+
+}
+
+
+.navbar-brand .fa-heartbeat {
+    color: #3b678e;
+}
+
+/* Define a cor da barra de navegação quando rolar */
+.navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: -4px 0px 2px #233769;
+}
+
+/* Mude a cor dos links quando a navbar estiver rolada */
+.navbar.scrolled .navbar-nav .nav-link {
+    color: #000; /* Ajuste a cor conforme necessário */
+}
+
+.navbar.scrolled .navbar-brand {
+    color: #000; /* Ajuste a cor da marca */
+}
+
+/* Ajuste a cor ao passar o mouse */
+.navbar.scrolled .navbar-nav .nav-link:hover,
+.navbar.scrolled .navbar-nav .nav-link:focus {
+    color: #3b678e;
+}
+
+.navbar.scrolled .navbar-nav .nav-item .nav-link.active {
+    color: #3b678e;
+}
+
+
+
+
+
+/*section-1 */
+
+
+.section-1 {
+    height: 100vh;
+    background: url("../img/Site/Prancheta\ 1\ copiar.png") no-repeat;
+    background-position: top left;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.section-1 .content {
+    position: relative;
+    height: 100vh;
+}
+
+.wrap-content {
+
+
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+
+.wrap-content img {
+
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 150px;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+    background: rgba(251, 254, 223, 0.47);
+}
+
+.text-box {
+
+    width: 70%;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.text-box h3 {
+    font-family: 'Dancing Script', cursive;
+    
+    font-size: 60px;
+    margin: 0;
+}
+
+.text-box .small-text {
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    padding: 0;
+    margin: 0;
+}
+
+/*section-1 end*/
+
+
+/* ======================= section 2 =================== */
+
+.section-2 {
+    background: url("../img/Site/");
+    background-size: 10%;
+    background-origin: top left;
+    padding: 80px 0px;
+
+}
+
+
+
+
+.section-2 h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #3b678e;
+}
+
+.section-2 h1::before {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4\ copiar.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 70px;
+    width: 100%;
+
+}
+
+.section-2 h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+
+
+
+.bridegroom {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+.bride {
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+.bridegroom img,
+.bride img {
+
+    width: 100%;
+
+}
+
+
+.text-section h3 {
+
+    text-align: center;
+    font-family: 'Open sans', sans-serif;
+    font-size: 40px;
+    
+    padding: 10px 0px;
+
+}
+
+
+.text-section p {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 60px;
+}
+
+
+
+/*===================== section-3 =====================*/
+
+.section-3 {
+    background: #ffebb9;
+    background: tomato;
+    background: url("../img/Site/Prancheta\ 2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+
+}
+
+
+
+
+.section-3 h1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+
+.section-3 p {
+    color: #fff;
+    font-family: 'Open sans', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+
+/*===================== section-3 =====================*/
+
+.section-4 {
+    background: #d1dbe5;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+
+}
+
+
+
+
+.section-4 .heading h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #3b678e;
+}
+
+.section-4 .heading h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+
+
+
+
+/*============= slide 1 ===============*/
+
+.section-4 .story-content {
+    border: 1px solid #dddddd;
+    box-shadow: 12px 0px 14px -11px #21346a;
+}
+
+
+
+.section-4 .story-content img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.section-4 .story-content .col-xl-6:nth-child(2) {
+    padding: 10px 20px;
+    background: #ffff;
+}
+
+.section-4 .story-content h1 {
+
+    color: #3b678e;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+}
+
+.section-4 .story-content p {
+
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+    font-size: 12px;
+
+}
+
+
+
+.section-4 .date {
+    width: fit-content;
+    font-size: 16px;
+    background: #21346a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/*========== content slide2 ==============*/
+
+
+.section-4 .story-content2 {
+    border: 1px solid #dddddd;
+    box-shadow: -12px 0px 14px -11px #21346a;
+    margin-top: 50px;
+    padding: 0;
+}
+
+
+.section-4 .story-content2 img {
+    width: 100%;
+
+}
+
+
+
+.section-4 .story-content2 .col-xl-6:nth-child(1) {
+    padding: 10px 20px;
+    background: #ffff;
+}
+
+.section-4 .story-content2 h1 {
+
+    color: #3b678e;
+
+    font-family: 'Dancing Script', cursive;
+
+    text-align: left;
+}
+
+.section-4 .story-content2 p {
+
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+    font-size: 12px;
+
+}
+
+
+
+.section-4 .story-content2 .date {
+    width: fit-content;
+    font-size: 16px;
+    background: #3b678e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/*===== content slider3 =========*/
+
+
+.section-4 .story-content3 {
+    margin-top: 50px;
+    border: 1px solid #dddddd;
+    box-shadow: 12px 0px 14px -11px #21346a;
+}
+
+
+.section-4 .story-content3 img {
+
+    width: 100%;
+
+}
+
+.section-4 .image1 {
+    padding: 10px 5px 5px 10px;
+}
+
+.section-4 .image2 {
+    padding: 10px 10px 5px 5px;
+}
+
+.section-4 .image3 {
+    padding: 5px 5px 10px 10px;
+}
+
+.section-4 .image4 {
+    padding: 5px 10px 10px 5px;
+}
+
+.section-4 .story-content3 .image-container {
+
+    background: url("../img/section3/lightpaperfibers.png") ;
+
+}
+
+
+.section-4 .story-content3 .text-container {
+    padding: 10px 20px;
+    background: #ffff;
+}
+
+.section-4 .story-content3 h1 {
+
+    color: #3b678e;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+}
+
+.section-4 .story-content3 p {
+
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+    font-size: 12px;
+
+
+}
+
+
+
+.section-4 .story-content3 .date {
+    width: fit-content;
+    font-size: 16px;
+    background: #d0ff76;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
+
+
+/*============= slide 4 ===============*/
+
+.section-4 .story-content4 {
+    border: 1px solid #dddddd;
+    box-shadow: -12px 0px 14px -11px #21346a;
+    margin-top: 50px;
+}
+
+.section-4 .story-content4 img {
+    width: 100%;
+}
+
+.section-4 .story-content4 .col-xl-6:nth-child(1) {
+    padding: 10px 20px;
+    background: #ffff;
+}
+
+.section-4 .story-content4 h1 {
+
+    color: #3b678e;
+
+    font-family: 'Dancing Script', cursive;
+
+    text-align: left;
+}
+
+.section-4 .story-content4 p {
+
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+    font-size: 12px;
+
+}
+
+
+
+.section-4 .story-content4 .date {
+    width: fit-content;
+    font-size: 16px;
+    background: #3b678e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 1rem 1rem;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+}
+
+.video-thumb {
+    display: none; /* Vídeo começa oculto */
+    width: 100%; /* Ocupa toda a largura do elemento pai */
+    height: 100%; /* Ocupa toda a altura do elemento pai */
+    object-fit: cover; /* Ajusta o vídeo para cobrir o container sem distorção */
+}
+
+
+
+
+
+
+/* =========== section 5 ============= */
+
+
+
+.section-5 {
+
+    padding: 80px 0px;
+
+}
+
+
+
+
+.section-5 .heading h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #3b678e;
+}
+
+.section-5 .heading h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+
+
+.event {}
+
+
+.event .border-area {
+    margin: 0 auto;
+    border: 1px solid #3b678e;
+    box-shadow: 0px 6px 5px -3px #3b678e;
+}
+
+
+.event .border-area:hover {
+    margin: 0 auto;
+    border: 1px solid #3b678e;
+    box-shadow: 0px 6px 11px -1px #3b678e;
+}
+
+
+
+.event img {
+    width: 100%;
+}
+
+.event .content {
+    background: #ffffff;
+    padding: 20px 10px;
+}
+
+.event .content h1 {
+    color: #21346a;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.event .content p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.event ul {
+    list-style-type: none;
+    margin: 0;
+    display: inline-block;
+    background: #d1dbe5;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.event ul li {
+    font-family: 'Open Sans', sans-serif;
+    
+    font-size: 13px;
+}
+
+
+
+
+
+/* =========== section 6 ============= */
+
+
+
+.section-6 {
+    background: #d1dbe5;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+
+}
+
+
+.section-6 .heading h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #3b678e;
+}
+
+.section-6 .heading h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+.section-6 .people-heading {
+
+    font-family: 'Open sans', sans-serif;
+    color: #fff;
+    padding: 0;
+    background-size: 20%;
+    background-position: center;
+
+}
+
+
+.section-6 .people-heading h1 {
+    font-family: 'Open sans', sans-serif;
+    
+    display: inline-block;
+    color: #555555;
+    padding: 10px 5px;
+    font-size: 30px;
+}
+
+
+.section-6 .bride-family .people-heading {
+
+    font-family: 'Open sans', sans-serif;
+    
+
+    display: inline-block;
+    color: #21346a;
+    margin: 0;
+    padding: 0px 0px;
+    text-align: center;
+
+
+}
+
+.section-6 .people {
+    padding: 0px 0px;
+    border-left: 5px solid #21346a;
+    border-bottom: 5px solid #21346a;
+    border: 5px solid rgba(255, 80, 80, 0);
+
+}
+
+
+
+.section-6 .people .border-area {
+    margin: 0 auto;
+    border: 1px solid #e2e2e2;
+
+}
+
+
+.section-6 .people .border-area:hover {
+    margin: 0 auto;
+    border: 1px solid #e2e2e2;
+
+    box-shadow: 0px 6px 11px -1px #bcbbbb;
+
+}
+
+
+
+.section-6 .people img {
+    width: 100%;
+}
+
+.section-6 .people .content {
+    background: #ffffff;
+    padding: 20px 10px;
+}
+
+.section-6 .people .content h1 {
+    color: #21346a;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.section-6 .people .content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #6c6c6c;
+}
+
+
+
+.section-6 .groom-family {
+
+    padding-bottom: 50px;
+
+}
+
+.section-6 .groom-family .people-heading {
+
+    font-family: 'Open sans', sans-serif;
+    
+
+    display: inline-block;
+    color: #21346a;
+    margin: 0;
+    padding: 0px 0px;
+    text-align: center;
+
+
+}
+
+
+
+
+
+/*section-7*/
+
+
+
+.section-7 {
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+
+}
+
+
+
+
+.section-7 .heading h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    padding-bottom: 60px;
+    color: #3b678e;
+}
+
+.section-7 .heading h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+
+.gallery-image {
+
+    padding: 0;
+
+
+}
+
+.gallery-image:hover {
+
+    z-index: 1;
+}
+
+
+.gallery-image a img {
+
+    width: 100%;
+}
+
+
+
+.gallery-image a img:hover {
+    position: relative;
+    transform: scale(1.1);
+    transition-duration: 1.3s;
+    transition-delay: 0.5s;
+    box-shadow: 0px 0px 14px -1px #333333;
+    z-index: 1;
+    width: 100%;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #21346a;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #3b678e;
+}
+
+.filter-btn.active {
+    background-color: #3b678e;
+    font-weight: bold;
+}
+
+.filter-item {
+    display: none; /* Oculta todos os itens inicialmente */
+}
+
+.filter-item.namoro {
+    display: block; /* Mostra apenas itens da categoria "namoro" inicialmente */
+}
+
+
+
+/*section-7 end*/
+
+/*section-8*/
+
+
+/* Estilo da seção */
+.section-8 {
+    background: url("../img/Site/Aquarela.png");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0px;
+    position: relative;
+
+}
+
+/* Título */
+.section-8 .ww-title {
+    color: #3b678e;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos campos de formulário */
+.section-8 .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Foco em campos */
+.section-8 .form-control:focus {
+    color: #495057;
+    background-color: #ffffff;
+    border-color: #3b678e;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(59, 103, 142, 0.25);
+}
+
+/* Placeholder */
+.section-8 .form-control::placeholder {
+    color: #6c757d;
+}
+
+/* Botão de envio */
+.section-8 .btn.btn-primary {
+    margin-top: 20px;
+    background: #3b678e;
+    border-color: #3b678e;
+    color: #fff;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.section-8 .btn.btn-primary:hover {
+    background-color: #2a4e6f;
+    border-color: #2a4e6f;
+}
+
+/* Labels */
+.section-8 .form-group label {
+    color: #3b678e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Especificações dos campos dinâmicos */
+#attendeeNames, #messageToCouple {
+    margin-top: 15px;
+}
+
+/* Adaptação de alinhamento de texto */
+.section-8 .text-center {
+    text-align: center;
+}
+
+
+
+/*section-8 end*/
+
+
+
+/*section-9*/
+
+
+.section-9 {
+    background: url("../img/Site/Save\ the\ date.2.png");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+    position: relative;
+}
+
+.section-9::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0px;
+    position: absolute;
+    top: 0;
+}
+
+
+/*section-9 end*/
+
+/*footer*/
+
+.thank-section {
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.thank-section .text-1 {
+    padding: 50px 0px;
+
+}
+
+.thank-section .text-1 h1 {
+    font-size: 80px;
+    font-family: 'Great Vibes', cursive;
+    
+
+}
+
+.text-1::after {
+
+    content: " ";
+    display: block;
+    background: url("../img/Site/logo.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100px;
+    width: 100%;
+    position: relative;
+
+
+}
+
+
+.thank-section .text-1 h4 {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    
+
+}
+
+.thank-section .text-2 {
+    padding: 0px 0px;
+}
+
+.thank-section .text-2 h2 {
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
+}
+
+.thank-section .text-2 h5 {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+
+}
+
+.help-block ul {
+    margin: 0;
+    padding: 0;
+}
+
+.help-block ul li {
+    list-style: none;
+    color: #21346a;
+    font-size: 13px;
+    padding: 5px 0 8px;
+}
+
+/*footer end*/
+
+
+
+
+
+
+
+
+/* start 1024px  */
+
+
+@media only screen and (max-width: 1024px) {
+    .navbar .navbar-brand {
+
+        font-family: 'Open sans', sans-serif;
+        padding: 5px 0px;
+        color: #000;
+        letter-spacing: 5px;
+        font-size: 30px;
+    }
+    
+    .navbar-nav .nav-link {
+        color: #000; /* Cor padrão dos links */
+    }
+    
+    /* Ajuste os links quando o menu colapsado é exibido */
+    .navbar-collapse.show .nav-link {
+        color: #000; /* Cor desejada dos links quando o menu está visível */
+    }
+    
+    /* Ajuste para o estado ativo */
+    .navbar-nav .nav-link.active {
+        color: #ff0000; /* Exemplo de cor para link ativo */
+    }
+    /* Ajuste a cor ao passar o mouse */
+    .navbar.scrolled .navbar-nav .nav-link:hover,
+    .navbar.scrolled .navbar-nav .nav-link:focus {
+        color: #3b678e;
+    }
+
+    .navbar.scrolled .navbar-nav .nav-item .nav-link.active {
+        color: #3b678e;
+    }
+    
+    .navbar-light .navbar-toggler {
+        border-color: #21346a;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: #21346a;
+    }
+    
+    .section-1 {
+        height: 100vh;
+        background: url("../img/Site/Prancheta\ 1.png") no-repeat;
+        background-position: top left;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    
+    .text-box {
+    width: 70%;
+    position: absolute;
+    top: 45%;
+    left: 44%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+    .wrap-content {
+        position: absolute;
+        top: 70%;
+        /* transform: translatey(-50%); */
+    }
+
+    .navbar {
+        padding: 20px 10px;
+        background: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .section-1 {
+        height: 100vh;
+        background: url("../img/Site/Prancheta\ 1.png") no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    .text-box {
+    width: 70%;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+    .text-section p {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+
+    .event {
+        display: inline-block;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+
+    .section-3 .col-xs-3 {
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .gallery-overflow-xs {
+
+        overflow: hidden;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .section-1 {
+        height: 100vh;
+        background: url("../img/Site/Prancheta\ 1.png") no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    .wrap-content img {
+        width: 86%;
+        margin-top: 100px;
+        margin-left: 20px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+        background: rgba(251, 254, 223, 0.47);
+    }
+
+    .wrap-content {
+        position: absolute;
+        top: 68%;
+        /* transform: translatey(-50%); */
+    }
+
+    .text-box {
+        width: 70%;
+        position: absolute;
+        top: 44%;
+        left: 45%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .section-3 .col-xs-3 {
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .section-2 h1::before {
+        content: "";
+        display: block;
+        background: url("../img/Site/Prancheta\ 4\ copiar.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        height: 70px;
+        width: 100%;
+    }
+
+    .section-2 h1::after {
+        content: "";
+        display: block;
+        background: url("../img/Site/Prancheta\ 4.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 45px;
+        width: 100%;
+    }
+
+
+    .section-3 .col-xl-3.col-lg-3.col-md-3.col-6 {
+        padding: 40px 0px;
+    }
+
+
+
+    .section-6 .people {
+        padding: 20px 0px;
+        border-left: 5px solid #21346a;
+        border-bottom: 5px solid #21346a;
+        border: 5px solid rgba(255, 80, 80, 0);
+    }
+    
+
+    .gallery-image {
+        /* padding: 0; */
+    }
+
+
+    .section-8 {
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0px;
+        overflow: hidden;
+    }
+
+    .section-9 {
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0px;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+
+
+    .gallery-overflow-xs {
+
+        overflow: hidden;
+
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .row.justify-content-center > .people {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.lista-pix h1 {
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    
+    text-align: center;
+    color: #3b678e;
+}
+.lista-pix .heading h1::after {
+
+    content: "";
+    display: block;
+    background: url("../img/Site/Prancheta\ 4.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 45px;
+    width: 100%;
+
+}
+
+.lista-pix {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0px;
+
+}
+
+.lista-pix .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.lista-pix .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+
+.lista-pix h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+}
+
+.presentes-container, .pix-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #21346a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.presentes-container:hover, .pix-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.lista-maps {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.lista-maps:hover {
+    transform: scale(1.05);
+}
+
+.lista-imagem {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.lista-imagem:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do container do Pix */
+.pix-container {
+    max-width: 45%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Estilo do QR Code */
+.qr-code-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+}
+
+/* Estilo do botão de copiar e input da chave */
+.pix-key-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pix-key-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 220px;
+    border-radius: 8px;
+    border: 2px solid #21346a;
+    margin-bottom: 10px;
+    opacity: 0;  /* Oculta o campo de texto */
+    pointer-events: none;  /* Impede que o campo de texto seja selecionado */
+}
+
+.pix-key-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #21346a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pix-key-container button:hover {
+    background-color: #3b678e;
+}
+
+.qr-code-container img {
+    width: 320px;
+    height: 320px;
+    border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    margin: 15% auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* Adicione esta media query */
+@media (max-width: 768px) {
+    .lista-pix .row {
+        flex-direction: column; /* Altera o layout para empilhado */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .pix-container,
+    .presentes-container {
+        max-width: 100%; /* Garante que ocupem toda a largura disponível */
+        margin-bottom: 20px; /* Adiciona espaço entre os elementos */
+    }
+}
+
+
+/*========== content ==============*/
+
+
+.section-5 .events-content {
+    border: 1px solid #dddddd;
+    box-shadow: -12px 0px 14px -11px #233769;
+    padding: 0;
+}
+
+
+.section-5 .events-content img {
+    width: 100%;
+
+}
+
+
+
+.section-5 .events-content .col-xl-6:nth-child(1) {
+    padding: 10px 20px;
+    background: #ffff;
+}
+
+.section-5 .events-content h1 {
+
+    color: #3b678e;
+
+    font-family: 'Dancing Script', cursive;
+
+    text-align: left;
+}
+
+.section-5 .events-content p {
+
+    color: #000;
+    font-family: 'Open sans', sans-serif;
+    text-align: left;
+
+
+}
+
+
+
+.section-5 .events-content .date {
+    width: fit-content;
+    font-size: 16px;
+    background: #233769;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
