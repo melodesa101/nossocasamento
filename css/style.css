@@ -1570,33 +1570,17 @@ body::-webkit-scrollbar {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex; /* Centraliza o modal */
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    width: 90%;
+    width: 80%;
     max-width: 400px;
+    margin: 15% auto;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative; /* Para posicionar o botão fechar corretamente */
-}
-
-.modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Espaço entre ícone e texto */
-    margin-bottom: 10px;
-}
-
-.check-icon {
-    font-size: 24px;
-    color: #28a745; /* Verde */
 }
 
 .close {
@@ -1606,21 +1590,13 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 10px;
     right: 20px;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
+    cursor: pointer;
 }
-
-/* Ajustes para telas pequenas */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%; /* Maior largura em telas menores */
-    }
-}
-
 
 /* Adicione esta media query */
 @media (max-width: 768px) {
