@@ -585,27 +585,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     <input class="form-control" type="text" id="respondentName" name="respondentName" required placeholder="Digite seu nome"/>
                     </div>
                     <div class="form-group">
-                    <label>Você poderá comparecer?</label><br>
-                    <input type="radio" id="attendYes" name="attendOption" value="Sim" onclick="toggleFields(true)">
-                    <label for="attendYes">Sim</label><br>
-                    <input type="radio" id="attendNo" name="attendOption" value="Não" onclick="toggleFields(false)">
-                    <label for="attendNo">Não</label>
+                        <label>Você poderá comparecer?</label><br>
+                        <input type="radio" id="attendYes" name="attendOption" value="Sim" onclick="toggleFields(true)">
+                        <label for="attendYes">Sim</label><br>
+                        <input type="radio" id="attendNo" name="attendOption" value="Não" onclick="toggleFields(false)">
+                        <label for="attendNo">Não</label>
                     </div>
-        
+                    
                     <div id="attendeeNames" style="display: none;">
-                    <div class="form-group">
-                        <label for="attendingGuests">De acordo com o convite, confirme os nomes das pessoas que irão comparecer:</label>
-                        <input class="form-control" type="text" id="attendingGuests" placeholder="Digite os nomes separados por vírgula"/>
+                        <div class="form-group">
+                            <label for="attendingGuests">De acordo com o convite, confirme os nomes das pessoas que irão comparecer:</label>
+                            <input class="form-control" type="text" id="attendingGuests" placeholder="Digite os nomes separados por vírgula"/>
+                        </div>
                     </div>
-                    </div>
-        
+                    
                     <div id="messageToCouple" style="display: none;">
-                    <div class="form-group">
-                        <label for="guestMessage">Poxa, lamentamos muito, deixe uma mensagem para os noivos:</label>
-                        <textarea class="form-control" id="guestMessage" rows="3" placeholder="Deixe sua mensagem aqui"></textarea>
+                        <div class="form-group">
+                            <label for="guestMessage">Poxa, lamentamos muito, deixe uma mensagem para os noivos:</label>
+                            <textarea class="form-control" id="guestMessage" rows="3" placeholder="Deixe sua mensagem aqui"></textarea>
+                        </div>
                     </div>
-                    </div>
-        
+                    
                     <div class="row">
                     <div class="col text-center">
                         <button class="btn btn-primary" type="button" onclick="enviarParaPlanilha(event)">Confirmar Presença e Enviar</button>
