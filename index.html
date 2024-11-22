@@ -637,12 +637,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function enviarParaPlanilha(event) {
         event.preventDefault();
 
+        // Captura o nome do respondente
         var respondentName = document.getElementById('respondentName').value.trim();
         if (!respondentName) {
             alert('Por favor, preencha o seu nome.');
             return;
         }
 
+        // Verifica se o usuário poderá comparecer
         var attendYes = document.getElementById('attendYes').checked;
         var attendNo = document.getElementById('attendNo').checked;
 
@@ -651,33 +653,49 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // Inicializa as variáveis
         var attendingGuests = '';
         var guestMessage = '';
         var attendanceStatus = attendYes ? 'Sim' : 'Não';
 
+        // Se for "Sim", captura os nomes dos convidados
         if (attendYes) {
             attendingGuests = document.getElementById('attendingGuests').value.trim();
-        } else {
-            guestMessage = document.getElementById('guestMessage').value.trim();
+            if (!attendingGuests) {
+                alert('Por favor, informe os nomes das pessoas que irão comparecer.');
+                return;
+            }
         }
 
+        // Se for "Não", captura a mensagem para os noivos
+        if (attendNo) {
+            guestMessage = document.getElementById('guestMessage').value.trim();
+            if (!guestMessage) {
+                alert('Por favor, deixe uma mensagem para os noivos.');
+                return;
+            }
+        }
+
+        // Dados que serão enviados para a planilha
         var data = {
             respondentName: respondentName,
             attendanceStatus: attendanceStatus,
             attendingGuests: attendingGuests,
             guestMessage: guestMessage,
-            date: new Date()
+            date: new Date().toLocaleString()
         };
 
+        // URL do Google Apps Script
         var scriptUrl = 'https://script.google.com/macros/s/AKfycbxh0AvzDnQd05UL7uZ4FDF-Gqlq617DcezWJVbWyvd9gQp8S9CNUvBkJSjVLANf60Ev/exec';
 
+        // Envia os dados usando fetch
         fetch(scriptUrl, {
             method: 'POST',
             mode: 'no-cors',
             body: JSON.stringify(data),
         })
         .then(() => {
-            // Exibe o novo modal de confirmação
+            // Exibe o modal personalizado após envio
             const modal = document.getElementById('confirmationModalCustom');
             modal.style.display = "flex";
         })
