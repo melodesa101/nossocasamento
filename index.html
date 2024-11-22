@@ -635,6 +635,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <script>
     function enviarParaPlanilha(event) {
+
+        // Função para alternar campos
+        function toggleFields(isAttending) {
+            document.getElementById('attendeeNames').style.display = isAttending ? 'block' : 'none';
+            document.getElementById('messageToCouple').style.display = isAttending ? 'none' : 'block';
+        }
         event.preventDefault();
 
         // Captura o nome do respondente
