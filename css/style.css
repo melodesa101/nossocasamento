@@ -1617,7 +1617,15 @@ body::-webkit-scrollbar {
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
     .modal-content {
-        width: 90%; /* Maior largura em telas menores */
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        margin: 100% auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: relative; /* Para posicionar o botão fechar corretamente */
     }
 }
 
