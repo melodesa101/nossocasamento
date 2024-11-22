@@ -574,50 +574,52 @@ document.addEventListener("DOMContentLoaded", () => {
     <section class="section-8 ww-section ww-rsvp-detail text-dark" id="rsvp">
         <div class="container">
             <div class="col-12 text-center">
-            <h2 class="h1 ww-title">Confirmar Presença</h2>
+                <h2 class="h1 ww-title">Confirmar Presença</h2>
             </div>
             <div class="row ww-rsvp-form">
-            <div class="col-md-8 mx-auto">
-                <div class="card-body">
-                <form id="confirmationForm" action="#" method="POST">
-                    <div class="form-group">
-                    <label for="respondentName">Seu nome*</label>
-                    <input class="form-control" type="text" id="respondentName" name="respondentName" required placeholder="Digite seu nome"/>
+                <div class="col-md-8 mx-auto">
+                    <div class="card-body">
+                        <form id="confirmationForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="respondentName">Seu nome*</label>
+                                <input class="form-control" type="text" id="respondentName" name="respondentName" required placeholder="Digite seu nome" />
+                            </div>
+                            <div class="form-group">
+                                <label>Você poderá comparecer?</label><br>
+                                <input type="radio" id="attendYes" name="attendOption" value="Sim" onclick="toggleFields(true)">
+                                <label for="attendYes">Sim</label><br>
+                                <input type="radio" id="attendNo" name="attendOption" value="Não" onclick="toggleFields(false)">
+                                <label for="attendNo">Não</label>
+                            </div>
+
+                            <!-- Campo para os convidados -->
+                            <div id="attendeeNames" style="display: none;">
+                                <div class="form-group">
+                                    <label for="attendingGuests">De acordo com o convite, confirme os nomes das pessoas que irão comparecer:</label>
+                                    <input class="form-control" type="text" id="attendingGuests" placeholder="Digite os nomes separados por vírgula" />
+                                </div>
+                            </div>
+
+                            <!-- Campo para mensagem -->
+                            <div id="messageToCouple" style="display: none;">
+                                <div class="form-group">
+                                    <label for="guestMessage">Poxa, lamentamos muito, deixe uma mensagem para os noivos:</label>
+                                    <textarea class="form-control" id="guestMessage" rows="3" placeholder="Deixe sua mensagem aqui"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-primary" type="button" onclick="enviarParaPlanilha(event)">Confirmar Presença e Enviar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label>Você poderá comparecer?</label><br>
-                        <input type="radio" id="attendYes" name="attendOption" value="Sim" onclick="toggleFields(true)">
-                        <label for="attendYes">Sim</label><br>
-                        <input type="radio" id="attendNo" name="attendOption" value="Não" onclick="toggleFields(false)">
-                        <label for="attendNo">Não</label>
-                    </div>
-                    
-                    <div id="attendeeNames" style="display: none;">
-                        <div class="form-group">
-                            <label for="attendingGuests">De acordo com o convite, confirme os nomes das pessoas que irão comparecer:</label>
-                            <input class="form-control" type="text" id="attendingGuests" placeholder="Digite os nomes separados por vírgula"/>
-                        </div>
-                    </div>
-                    
-                    <div id="messageToCouple" style="display: none;">
-                        <div class="form-group">
-                            <label for="guestMessage">Poxa, lamentamos muito, deixe uma mensagem para os noivos:</label>
-                            <textarea class="form-control" id="guestMessage" rows="3" placeholder="Deixe sua mensagem aqui"></textarea>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                    <div class="col text-center">
-                        <button class="btn btn-primary" type="button" onclick="enviarParaPlanilha(event)">Confirmar Presença e Enviar</button>
-                    </div>
-                    </div>
-                </form>
                 </div>
-            </div>
             </div>
         </div>
 
-        <!-- Novo Modal de Confirmação -->
+        <!-- Modal de confirmação -->
         <div id="confirmationModalCustom" class="custom-modal" style="display: none;">
             <div class="custom-modal-content">
                 <div class="custom-modal-header">
@@ -628,96 +630,85 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="custom-btn" onclick="closeCustomModal()">Fechar</button>
             </div>
         </div>
-
     </section>
 
-    
-
     <script>
-    function enviarParaPlanilha(event) {
-
         // Função para alternar campos
         function toggleFields(isAttending) {
             document.getElementById('attendeeNames').style.display = isAttending ? 'block' : 'none';
             document.getElementById('messageToCouple').style.display = isAttending ? 'none' : 'block';
         }
-        event.preventDefault();
 
-        // Captura o nome do respondente
-        var respondentName = document.getElementById('respondentName').value.trim();
-        if (!respondentName) {
-            alert('Por favor, preencha o seu nome.');
-            return;
-        }
+        // Função para enviar dados
+        function enviarParaPlanilha(event) {
+            event.preventDefault();
 
-        // Verifica se o usuário poderá comparecer
-        var attendYes = document.getElementById('attendYes').checked;
-        var attendNo = document.getElementById('attendNo').checked;
-
-        if (!attendYes && !attendNo) {
-            alert('Por favor, selecione se poderá comparecer.');
-            return;
-        }
-
-        // Inicializa as variáveis
-        var attendingGuests = '';
-        var guestMessage = '';
-        var attendanceStatus = attendYes ? 'Sim' : 'Não';
-
-        // Se for "Sim", captura os nomes dos convidados
-        if (attendYes) {
-            attendingGuests = document.getElementById('attendingGuests').value.trim();
-            if (!attendingGuests) {
-                alert('Por favor, informe os nomes das pessoas que irão comparecer.');
+            const respondentName = document.getElementById('respondentName').value.trim();
+            if (!respondentName) {
+                alert('Por favor, preencha o seu nome.');
                 return;
             }
-        }
 
-        // Se for "Não", captura a mensagem para os noivos
-        if (attendNo) {
-            guestMessage = document.getElementById('guestMessage').value.trim();
-            if (!guestMessage) {
-                alert('Por favor, deixe uma mensagem para os noivos.');
+            const attendYes = document.getElementById('attendYes').checked;
+            const attendNo = document.getElementById('attendNo').checked;
+
+            if (!attendYes && !attendNo) {
+                alert('Por favor, selecione se poderá comparecer.');
                 return;
             }
+
+            let attendingGuests = '';
+            let guestMessage = '';
+            const attendanceStatus = attendYes ? 'Sim' : 'Não';
+
+            if (attendYes) {
+                attendingGuests = document.getElementById('attendingGuests').value.trim();
+                if (!attendingGuests) {
+                    alert('Por favor, informe os nomes das pessoas que irão comparecer.');
+                    return;
+                }
+            }
+
+            if (attendNo) {
+                guestMessage = document.getElementById('guestMessage').value.trim();
+                if (!guestMessage) {
+                    alert('Por favor, deixe uma mensagem para os noivos.');
+                    return;
+                }
+            }
+
+            const data = {
+                respondentName: respondentName,
+                attendanceStatus: attendanceStatus,
+                attendingGuests: attendingGuests,
+                guestMessage: guestMessage,
+                date: new Date().toLocaleString(),
+            };
+
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbxh0AvzDnQd05UL7uZ4FDF-Gqlq617DcezWJVbWyvd9gQp8S9CNUvBkJSjVLANf60Ev/exec';
+
+            fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: JSON.stringify(data),
+            })
+                .then(() => {
+                    const modal = document.getElementById('confirmationModalCustom');
+                    modal.style.display = "flex";
+                })
+                .catch((error) => {
+                    console.error('Erro:', error);
+                    alert('Ocorreu um erro ao enviar os dados.');
+                });
         }
 
-        // Dados que serão enviados para a planilha
-        var data = {
-            respondentName: respondentName,
-            attendanceStatus: attendanceStatus,
-            attendingGuests: attendingGuests,
-            guestMessage: guestMessage,
-            date: new Date().toLocaleString()
-        };
-
-        // URL do Google Apps Script
-        var scriptUrl = 'https://script.google.com/macros/s/AKfycbxh0AvzDnQd05UL7uZ4FDF-Gqlq617DcezWJVbWyvd9gQp8S9CNUvBkJSjVLANf60Ev/exec';
-
-        // Envia os dados usando fetch
-        fetch(scriptUrl, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: JSON.stringify(data),
-        })
-        .then(() => {
-            // Exibe o modal personalizado após envio
+        // Função para fechar o modal
+        function closeCustomModal() {
             const modal = document.getElementById('confirmationModalCustom');
-            modal.style.display = "flex";
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            alert('Ocorreu um erro ao enviar os dados.');
-        });
-    }
-
-    function closeCustomModal() {
-        const modal = document.getElementById('confirmationModalCustom');
-        modal.style.display = "none";
-    }
-
-
+            modal.style.display = "none";
+        }
     </script>
+
 
     <!--section 7-->
 
