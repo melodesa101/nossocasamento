@@ -618,20 +618,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         </div>
-
-        <!-- Modal de confirmação -->
-        <div id="confirmationModalCustom" class="custom-modal" style="display: none;">
-            <div class="custom-modal-content">
-                <div class="custom-modal-header">
-                    <img src="img/logo-pequena.png" alt="Logo" class="custom-modal-logo">
-                    <h3>Confirmação Enviada!</h3>
-                </div>
-                <p>Muito obrigado por confirmar sua presença. Estamos ansiosos para compartilhar esse momento especial com você!</p>
-                <button class="custom-btn" onclick="closeCustomModal()">Fechar</button>
-            </div>
-        </div>
     </section>
-
+    <!-- Modal de confirmação -->
+    <div id="confirmationModalCustom" class="custom-modal" style="display: none;">
+        <div class="custom-modal-content">
+            <div class="custom-modal-header">
+                <img src="img/logo-pequena.png" alt="Logo" class="custom-modal-logo">
+                <h3>Confirmação Enviada!</h3>
+            </div>
+            <p>Muito obrigado por confirmar sua presença. Estamos ansiosos para compartilhar esse momento especial com você!</p>
+            <button class="custom-btn" onclick="closeCustomModal()">Fechar</button>
+        </div>
+    </div>
     <script>
         // Função para alternar campos
         function toggleFields(isAttending) {
