@@ -35,34 +35,35 @@
     </style>
 </head>
 <body>
-    <button id="playButton">Reproduzir</button>
-    <video id="meuVideo" src="images/savethedate.mp4" playsinline></video>
+    <video id="meuVideo" src="images/savethedate.mp4" autoplay playsinline></video>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('meuVideo');
-            const playButton = document.getElementById('playButton');
 
-            // Função para iniciar o vídeo
-            function playVideoWithSound() {
-                playButton.style.display = 'none'; // Oculta o botão
-                video.play().catch(error => {
-                    console.error('Erro ao reproduzir o vídeo:', error);
+            // Tenta reproduzir o vídeo automaticamente
+            video.play().catch(error => {
+                console.warn('Autoplay bloqueado. Tentando silenciar o vídeo e reproduzir novamente.');
+                video.muted = true; // Silencia o vídeo
+                video.play().catch(err => {
+                    console.error('Ainda não foi possível reproduzir o vídeo:', err);
                 });
-            }
+            });
 
-            // Adiciona o evento de clique ao botão
-            playButton.addEventListener('click', () => {
-                playVideoWithSound();
-
-                // Solicita tela cheia após o clique
+            // Função para solicitar tela cheia ao carregar a página
+            function requestFullScreen() {
                 if (video.requestFullscreen) {
                     video.requestFullscreen();
                 } else if (video.webkitRequestFullscreen) { // Safari
                     video.webkitRequestFullscreen();
                 } else if (video.msRequestFullscreen) { // IE11
                     video.msRequestFullscreen();
+                } else {
+                    console.warn('Tela cheia não suportada neste navegador.');
                 }
-            });
+            }
+
+            // Solicita tela cheia após o carregamento do vídeo
+            video.addEventListener('canplay', requestFullScreen);
         });
     </script>
 </body>
