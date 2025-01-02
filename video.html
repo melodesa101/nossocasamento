@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso casamento</title>
+    <title>Nosso Casamento</title>
     <style>
         body, html {
             margin: 0;
@@ -28,15 +28,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('meuVideo');
-            video.addEventListener('click', () => {
-                video.muted = false; // Ativa o som ao clicar
-            });
 
-
-            // Função para solicitar tela cheia
+            // Tenta entrar em tela cheia
             function requestFullScreen() {
                 if (video.requestFullscreen) {
-                    video.requestFullscreen();
+                    video.requestFullscreen().catch(() => {
+                        console.log('Não foi possível entrar em tela cheia automaticamente.');
+                    });
                 } else if (video.webkitRequestFullscreen) { // Safari
                     video.webkitRequestFullscreen();
                 } else if (video.msRequestFullscreen) { // IE11
@@ -44,11 +42,14 @@
                 }
             }
 
-            // Tenta entrar em tela cheia quando o vídeo está carregado e pronto para reprodução
-            video.addEventListener('loadedmetadata', requestFullScreen);
+            // Quando o vídeo começa a ser reproduzido, tenta entrar em tela cheia
+            video.addEventListener('play', requestFullScreen);
 
-            // Se o navegador não permitir entrar em tela cheia automaticamente, tenta ao clicar no vídeo
-            video.addEventListener('click', requestFullScreen);
+            // Ativa o som ao clicar no vídeo e entra em tela cheia caso ainda não esteja
+            video.addEventListener('click', () => {
+                video.muted = false; // Ativa o som
+                requestFullScreen(); // Solicita tela cheia
+            });
         });
     </script>
 </body>
