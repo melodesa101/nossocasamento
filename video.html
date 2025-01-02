@@ -29,12 +29,10 @@
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('meuVideo');
 
-            // Tenta entrar em tela cheia
+            // Função para entrar em tela cheia
             function requestFullScreen() {
                 if (video.requestFullscreen) {
-                    video.requestFullscreen().catch(() => {
-                        console.log('Não foi possível entrar em tela cheia automaticamente.');
-                    });
+                    video.requestFullscreen();
                 } else if (video.webkitRequestFullscreen) { // Safari
                     video.webkitRequestFullscreen();
                 } else if (video.msRequestFullscreen) { // IE11
@@ -42,13 +40,19 @@
                 }
             }
 
-            // Quando o vídeo começa a ser reproduzido, tenta entrar em tela cheia
-            video.addEventListener('play', requestFullScreen);
+            // Aguarda interação do usuário para iniciar tela cheia
+            const enableFullScreen = () => {
+                video.muted = false; // Ativa som
+                requestFullScreen();
+                video.removeEventListener('click', enableFullScreen);
+            };
 
-            // Ativa o som ao clicar no vídeo e entra em tela cheia caso ainda não esteja
-            video.addEventListener('click', () => {
-                video.muted = false; // Ativa o som
-                requestFullScreen(); // Solicita tela cheia
+            // Adiciona listener no clique inicial
+            video.addEventListener('click', enableFullScreen);
+
+            // Tenta avisar o usuário caso o navegador não permita automaticamente
+            video.addEventListener('play', () => {
+                requestFullScreen();
             });
         });
     </script>
