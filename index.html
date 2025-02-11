@@ -637,7 +637,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('messageToCouple').style.display = isAttending ? 'none' : 'block';
         }
 
-        // Função para enviar dados
         function enviarParaPlanilha(event) {
             event.preventDefault();
 
@@ -690,14 +689,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 mode: 'no-cors',
                 body: JSON.stringify(data),
             })
-                .then(() => {
-                    const modal = document.getElementById('confirmationModalCustom');
-                    modal.style.display = "flex";
-                })
-                .catch((error) => {
-                    console.error('Erro:', error);
-                    alert('Ocorreu um erro ao enviar os dados.');
-                });
+            .then(() => {
+                // Exibir o modal de confirmação
+                document.getElementById('confirmationModalCustom').style.display = "flex";
+
+                // Limpar os campos do formulário
+                document.getElementById("confirmationForm").reset();
+
+                // Esconder os campos extras
+                document.getElementById('attendeeNames').style.display = 'none';
+                document.getElementById('messageToCouple').style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao enviar os dados.');
+            });
         }
 
         // Função para fechar o modal
