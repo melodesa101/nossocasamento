@@ -290,3 +290,17 @@ button i {
 }
 
 
+/* Estilo para indicar que o presente já foi dado */
+.already-gifted {
+    background-color: #ccc; /* Cor de fundo para botões já usados */
+    cursor: not-allowed; /* Desativa o botão */
+}
+
+.gift-status {
+    color: green;
+    font-weight: bold;
+}
+
+.presented {
+    color: red; /* Cor indicando que já foi presenteado */
+}

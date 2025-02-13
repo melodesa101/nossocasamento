@@ -29,266 +29,533 @@
             <img src="img/tv.png" alt="Smart TV 55'">
             <h2>TV de 55' para o noivo assistir a Champions League</h2>
             <p>R$ 2.493,80</p>
-            <button onclick="openModal(1)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(1)" 
+                    class="present-button 
+                           ${presentesDoados.includes(1) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(1) ? 'presented' : ''}">
+                ${presentesDoados.includes(1) ? 'Já presenteado' : ''}
+            </span>
         </div>
+        
         
         <div class="card" data-id="2" data-price="3591.07">
             <img src="img/geladeira.png" alt="Geladeira">
             <h2>Geladeira</h2>
             <p>R$ 3.591,07</p>
-            <button onclick="openModal(2)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(2)" 
+                    class="present-button 
+                           ${presentesDoados.includes(2) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(2) ? 'presented' : ''}">
+                ${presentesDoados.includes(2) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="3" data-price="79.40">
             <img src="img/kit-edredom.png" alt="Kit edredom">
             <h2>Kit edredom</h2>
             <p>R$ 79,40</p>
-            <button onclick="openModal(3)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(3)" 
+                    class="present-button 
+                           ${presentesDoados.includes(3) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(3) ? 'presented' : ''}">
+                ${presentesDoados.includes(3) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="4" data-price="96.48">
             <img src="img/kit-ferramentas.png" alt="Kit ferramenta">
             <h2>Kit ferramenta</h2>
             <p>R$ 96,48</p>
-            <button onclick="openModal(4)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(4)" 
+                    class="present-button 
+                           ${presentesDoados.includes(4) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(4) ? 'presented' : ''}">
+                ${presentesDoados.includes(4) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="5" data-price="2623.45">
             <img src="img/cama-box.png" alt="Cama box">
             <h2>Cama box</h2>
             <p>R$ 2.623,45</p>
-            <button onclick="openModal(5)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(5)" 
+                    class="present-button 
+                           ${presentesDoados.includes(5) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(5) ? 'presented' : ''}">
+                ${presentesDoados.includes(5) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="6" data-price="3722.84">
             <img src="img/lava-e-seca.png" alt="Máquina de lavar">
             <h2>Máquina de lavar</h2>
             <p>R$ 3.722,84</p>
-            <button onclick="openModal(6)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(6)" 
+                    class="present-button 
+                           ${presentesDoados.includes(6) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(6) ? 'presented' : ''}">
+                ${presentesDoados.includes(6) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="7" data-price="1292.90">
             <img src="img/tv32.png" alt="TV para assistir Barbie enquanto o noivo assiste Champions">
             <h2>TV de 32' para assistir Barbie enquanto o noivo assiste Champions</h2>
             <p>R$ 1.292,90</p>
-            <button onclick="openModal(7)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(7)" 
+                    class="present-button 
+                           ${presentesDoados.includes(7) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(7) ? 'presented' : ''}">
+                ${presentesDoados.includes(7) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="8" data-price="205.75">
             <img src="img/aspirador-po.png" alt="Aspirador de pó">
             <h2>Aspirador de pó</h2>
             <p>R$ 205,75</p>
-            <button onclick="openModal(8)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(8)" 
+                    class="present-button 
+                           ${presentesDoados.includes(8) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(8) ? 'presented' : ''}">
+                ${presentesDoados.includes(8) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="9" data-price="104.98">
             <img src="img/ferro-passar.png" alt="Ferro de passar roupa">
             <h2>Ferro de passar roupa</h2>
             <p>R$ 104,98</p>
-            <button onclick="openModal(9)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(9)" 
+                    class="present-button 
+                           ${presentesDoados.includes(9) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(9) ? 'presented' : ''}">
+                ${presentesDoados.includes(9) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="10" data-price="45.04">
             <img src="img/kit-toalha.png" alt="Kit toalha">
             <h2>Kit toalha</h2>
             <p>R$ 45,04</p>
-            <button onclick="openModal(10)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(10)" 
+                    class="present-button 
+                           ${presentesDoados.includes(10) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(10) ? 'presented' : ''}">
+                ${presentesDoados.includes(10) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="11" data-price="398.82">
             <img src="img/conjunto-panela.png" alt="Conjunto de panelas">
             <h2>Conjunto de panelas</h2>
             <p>R$ 398,82</p>
-            <button onclick="openModal(11)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(11)" 
+                    class="present-button 
+                           ${presentesDoados.includes(11) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(11) ? 'presented' : ''}">
+                ${presentesDoados.includes(11) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="12" data-price="99.63">
             <img src="img/tapete.png" alt="Tapete chique da Shopee">
             <h2>Tapete chique da Shopee</h2>
             <p>R$ 99,63</p>
-            <button onclick="openModal(12)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(12)" 
+                    class="present-button 
+                           ${presentesDoados.includes(12) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(12) ? 'presented' : ''}">
+                ${presentesDoados.includes(12) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="13" data-price="952.06">
             <img src="img/mesa.png" alt="Mesa sem cadeira pra comer em pé">
             <h2>Mesa sem cadeira pra comer em pé</h2>
             <p>R$ 952,06</p>
-            <button onclick="openModal(13)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(13)" 
+                    class="present-button 
+                           ${presentesDoados.includes(13) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(13) ? 'presented' : ''}">
+                ${presentesDoados.includes(13) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="14" data-price="335.94">
             <img src="img/air-flyer.png" alt="Air fryer para batata frita">
             <h2>Air fryer para batata frita</h2>
             <p>R$ 335,94</p>
-            <button onclick="openModal(14)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(14)" 
+                    class="present-button 
+                           ${presentesDoados.includes(14) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(14) ? 'presented' : ''}">
+                ${presentesDoados.includes(14) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="15" data-price="2496.39">
             <img src="img/sofa.png" alt="Sofá para o noivo trabalhar">
             <h2>Sofá para o noivo Jogar FIFA com os amigos</h2>
             <p>R$ 2.496,39</p>
-            <button onclick="openModal(15)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(15)" 
+                    class="present-button 
+                           ${presentesDoados.includes(15) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(15) ? 'presented' : ''}">
+                ${presentesDoados.includes(15) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="16" data-price="1438.22">
             <img src="img/guarda-roupa.png" alt="Guarda roupa da noiva com uma gaveta para o noivo">
             <h2>Guarda roupa da noiva com uma gaveta para o noivo</h2>
             <p>R$ 1.438,22</p>
-            <button onclick="openModal(16)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(16)" 
+                    class="present-button 
+                           ${presentesDoados.includes(16) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(16) ? 'presented' : ''}">
+                ${presentesDoados.includes(16) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="17" data-price="278.09">
             <img src="img/cafeteira.png" alt="Cafeteira para garantir o bom humor da noiva">
             <h2>Cafeteira para garantir o bom humor da noiva</h2>
             <p>R$ 278,09</p>
-            <button onclick="openModal(17)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(17)" 
+                    class="present-button 
+                           ${presentesDoados.includes(17) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(17) ? 'presented' : ''}">
+                ${presentesDoados.includes(17) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="18" data-price="156.42">
             <img src="img/liquidificador.png" alt="Liquidificador masterchef">
             <h2>Liquidificador masterchef</h2>
             <p>R$ 156,42</p>
-            <button onclick="openModal(18)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(18)" 
+                    class="present-button 
+                           ${presentesDoados.includes(18) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(18) ? 'presented' : ''}">
+                ${presentesDoados.includes(18) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="19" data-price="301.33">
             <img src="img/batedeira.png" alt="Batedeira do bake off brasil">
             <h2>Batedeira do bake off brasil</h2>
             <p>R$ 301,33</p>
-            <button onclick="openModal(19)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(19)" 
+                    class="present-button 
+                           ${presentesDoados.includes(19) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(19) ? 'presented' : ''}">
+                ${presentesDoados.includes(19) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="20" data-price="62.88">
             <img src="img/lixeira.png" alt="Lixeira do home office">
             <h2>Lixeira do home office</h2>
             <p>R$ 62,88</p>
-            <button onclick="openModal(20)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(20)" 
+                    class="present-button 
+                           ${presentesDoados.includes(20) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(20) ? 'presented' : ''}">
+                ${presentesDoados.includes(20) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="21" data-price="52.49">
             <img src="img/50-reais.png" alt="Toma aqui uns 50 reais">
             <h2>Toma aqui uns 50 reais</h2>
             <p>R$ 52,49</p>
-            <button onclick="openModal(21)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(21)" 
+                    class="present-button 
+                           ${presentesDoados.includes(21) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(21) ? 'presented' : ''}">
+                ${presentesDoados.includes(21) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="22" data-price="303.39">
             <img src="img/espelho.png" alt="Espelho para noiva virar blogueira de look">
             <h2>Espelho para noiva virar blogueira de look</h2>
             <p>R$ 303,39</p>
-            <button onclick="openModal(22)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(22)" 
+                    class="present-button 
+                           ${presentesDoados.includes(22) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(22) ? 'presented' : ''}">
+                ${presentesDoados.includes(22) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="23" data-price="20.89">
             <img src="img/prime.png" alt="1 mês de prime video">
             <h2>1 mês de prime video</h2>
             <p>R$ 20,89</p>
-            <button onclick="openModal(23)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(23)" 
+                    class="present-button 
+                           ${presentesDoados.includes(23) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(23) ? 'presented' : ''}">
+                ${presentesDoados.includes(23) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="24" data-price="31.39">
             <img src="img/frigideira.png" alt="Frigideira para o noivo queimar comida">
             <h2>Frigideira para o noivo queimar comida</h2>
             <p>R$ 31,39</p>
-            <button onclick="openModal(24)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(24)" 
+                    class="present-button 
+                           ${presentesDoados.includes(24) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(24) ? 'presented' : ''}">
+                ${presentesDoados.includes(24) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="25" data-price="195.16">
             <img src="img/jantar-romantico.png" alt="Jantar romantico na lua de mel">
             <h2>Jantar romantico na lua de mel</h2>
             <p>R$ 195,16</p>
-            <button onclick="openModal(25)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(25)" 
+                    class="present-button 
+                           ${presentesDoados.includes(25) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(25) ? 'presented' : ''}">
+                ${presentesDoados.includes(25) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="26" data-price="15.74">
             <img src="img/lua-mel.png" alt="Lembrancinha da lua de mel">
             <h2>Lembrancinha da lua de mel</h2>
             <p>R$ 15,74</p>
-            <button onclick="openModal(26)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(26)" 
+                    class="present-button 
+                           ${presentesDoados.includes(26) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(26) ? 'presented' : ''}">
+                ${presentesDoados.includes(26) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="27" data-price="48.28">
             <img src="img/buque.png" alt="Ajude o noivo a dar flores para a noiva">
             <h2>Ajude o noivo a dar flores para a noiva</h2>
             <p>R$ 48,28</p>
-            <button onclick="openModal(27)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(27)" 
+                    class="present-button 
+                           ${presentesDoados.includes(27) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(27) ? 'presented' : ''}">
+                ${presentesDoados.includes(27) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="28" data-price="944.81">
             <img src="img/vale-terno.png" alt="Terno do noivo para noiva chorar de emoção">
             <h2>Terno do noivo para noiva chorar de emoção</h2>
             <p>R$ 944,81</p>
-            <button onclick="openModal(28)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(28)" 
+                    class="present-button 
+                           ${presentesDoados.includes(28) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(28) ? 'presented' : ''}">
+                ${presentesDoados.includes(28) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="29" data-price="116.52">
             <img src="img/aposentadoria.png" alt="Cota para a aposentadoria dos noivos">
             <h2>Cota para a aposentadoria dos noivos</h2>
             <p>R$ 116,52</p>
-            <button onclick="openModal(29)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(29)" 
+                    class="present-button 
+                           ${presentesDoados.includes(29) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(29) ? 'presented' : ''}">
+                ${presentesDoados.includes(29) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="30" data-price="300.23">
             <img src="img/amigos-para-sempre.png" alt="Cota 'amigos para sempre'">
             <h2>Cota 'amigos para sempre'</h2>
             <p>R$ 300,23</p>
-            <button onclick="openModal(30)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(30)" 
+                    class="present-button 
+                           ${presentesDoados.includes(30) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(30) ? 'presented' : ''}">
+                ${presentesDoados.includes(30) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="31" data-price="8.39">
             <img src="img/miojo.png" alt="Patrocine a noite do miojo">
             <h2>Patrocine a noite do miojo</h2>
             <p>R$ 8,39</p>
-            <button onclick="openModal(31)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(31)" 
+                    class="present-button 
+                           ${presentesDoados.includes(31) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(31) ? 'presented' : ''}">
+                ${presentesDoados.includes(31) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="32" data-price="5245.84">
             <img src="img/pc-gamer.png" alt="PC gamer para o noivo ser feliz">
             <h2>PC gamer para o noivo ser feliz</h2>
             <p>R$ 5.245,84</p>
-            <button onclick="openModal(32)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(32)" 
+                    class="present-button 
+                           ${presentesDoados.includes(32) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(32) ? 'presented' : ''}">
+                ${presentesDoados.includes(32) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="33" data-price="175.32">
             <img src="img/multa.png" alt="Pague a multa do noivo tocando sax depois do horário permitido">
             <h2>Pague a multa do noivo tocando sax depois do horário permitido</h2>
             <p>R$ 175,32</p>
-            <button onclick="openModal(33)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(33)" 
+                    class="present-button 
+                           ${presentesDoados.includes(33) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(33) ? 'presented' : ''}">
+                ${presentesDoados.includes(33) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="34" data-price="355.88">
             <img src="img/Boleto.png" alt="Boletinho sincero">
             <h2>Boletinho sincero</h2>
             <p>R$ 355,88</p>
-            <button onclick="openModal(34)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(34)" 
+                    class="present-button 
+                           ${presentesDoados.includes(34) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(34) ? 'presented' : ''}">
+                ${presentesDoados.includes(34) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="35" data-price="128.08">
             <img src="img/academia.png" alt="2 meses de academia para o noivo manter o foco">
             <h2>2 meses de academia para o noivo manter o foco</h2>
             <p>R$ 128,08</p>
-            <button onclick="openModal(35)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(35)" 
+                    class="present-button 
+                           ${presentesDoados.includes(35) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(35) ? 'presented' : ''}">
+                ${presentesDoados.includes(35) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
         <div class="card" data-id="36" data-price="1782.56">
             <img src="img/forno.png" alt="Forno para o noivo aprender a fazer bolo">
             <h2>Forno para o noivo aprender a fazer bolo</h2>
             <p>R$ 1.782,56</p>
-            <button onclick="openModal(36)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(36)" 
+                    class="present-button 
+                           ${presentesDoados.includes(36) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(36) ? 'presented' : ''}">
+                ${presentesDoados.includes(36) ? 'Já presenteado' : ''}
+            </span>
         </div>
 
         <div class="card" data-id="37" data-price="997.31">
             <img src="img/vaso-sanitario.png" alt="Forno para o noivo aprender a fazer bolo">
             <h2>Vaso sanitário para fazer as necessidades</h2>
             <p>R$ 997,31</p>
-            <button onclick="openModal(37)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(37)" 
+                    class="present-button 
+                           ${presentesDoados.includes(37) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(37) ? 'presented' : ''}">
+                ${presentesDoados.includes(37) ? 'Já presenteado' : ''}
+            </span>
         </div>
 
         <div class="card" data-id="38" data-price="2309.56">
             <img src="img/ar-condicionado.png" alt="Forno para o noivo aprender a fazer bolo">
             <h2>Ar condicionado para os noivos não passarem calor</h2>
             <p>R$ 2.309,56</p>
-            <button onclick="openModal(38)">Presentear <i class="fas fa-gift"></i></button>
+            <button onclick="openModal(38)" 
+                    class="present-button 
+                           ${presentesDoados.includes(38) ? 'already-gifted' : ''}">
+                Presentear <i class="fas fa-gift"></i>
+            </button>
+            <span class="gift-status ${presentesDoados.includes(38) ? 'presented' : ''}">
+                ${presentesDoados.includes(38) ? 'Já presenteado' : ''}
+            </span>
         </div>
         
     </div>
@@ -319,7 +586,10 @@
             </form>                           
         </div>
     </div>
-
+    <script>
+        // Array para armazenar os IDs dos presentes já dados
+        let presentesDoados = [14, 17]; // IDs dos presentes que já foram doados
+    </script>
     
     <script src="scripts.js"></script>
 </body>
