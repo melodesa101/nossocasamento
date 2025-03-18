@@ -91,9 +91,9 @@ header p{
 
 .gift-list {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .card {
@@ -119,16 +119,17 @@ header p{
     box-shadow: 0px 0 30px rgba(1, 35, 99, 0.2);
 }
 
-/* Estilos responsivos */
+/* Dois itens por linha */
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 10px); /* Ajuste para telas menores */
+        width: calc(50% - 10px); /* Mantém dois cartões por linha */
     }
 }
 
+/* Garante dois por linha mesmo em telas menores */
 @media (max-width: 480px) {
     .card {
-        width: 33%; /* Um card por linha em telas muito pequenas */
+        width: calc(50% - 10px); /* Em vez de 33%, força dois cartões */
     }
 }
 
