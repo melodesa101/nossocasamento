@@ -180,6 +180,12 @@ button i {
     font-size: 12px;
 }
 
+@media only screen and (max-width: 768px) {
+    .button i {
+        font-size: 10px;
+    }
+}
+
 .card button:hover {
     background-color: #0b4d93;
     transition: all 0.3s ease-in-out;
