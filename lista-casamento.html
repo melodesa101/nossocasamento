@@ -406,22 +406,40 @@
         </div>
     </div>
     <script>
-        const presentesDados = [2, 4, 8, 14, 17, 18, 24, 40]; // IDs dos itens já presenteados
-
+        const presentesDados = [1, 2, 4, 8, 14, 17, 18, 19, 24, 29, 40, 49]; // IDs dos itens já presenteados
+        const adquiridosDados = [5, 6, 11, 39, 45, 50]; // IDs dos itens adquiridos
+    
         document.addEventListener("DOMContentLoaded", () => {
             presentesDados.forEach(id => {
                 const card = document.querySelector(`.card[data-id='${id}']`);
                 if (card) {
                     const button = card.querySelector("button");
-                    button.textContent = "Já presenteado 🎁";
-                    button.disabled = true;
-                    button.style.backgroundColor = "#ccc"; // Cinza para indicar indisponível
-                    button.style.cursor = "not-allowed";
+                    if (button) {
+                        button.textContent = `Já presenteado 🎁`;
+                        button.disabled = true;
+                        button.style.backgroundColor = "#ccc"; // Cinza para indicar indisponível
+                        button.style.cursor = "not-allowed";
+                        button.setAttribute("data-status", "presenteado");
+                    }
+                }
+            });
+    
+            adquiridosDados.forEach(id => {
+                const card = document.querySelector(`.card[data-id='${id}']`);
+                if (card) {
+                    const button = card.querySelector("button");
+                    if (button) {
+                        button.textContent = `Adquirido ✅`;
+                        button.disabled = true;
+                        button.style.backgroundColor = "#4CAF50"; // Verde para indicar adquirido
+                        button.style.cursor = "not-allowed";
+                        button.setAttribute("data-status", "adquirido");
+                    }
                 }
             });
         });
-
     </script>
+
     
     <script src="scripts.js"></script>
 </body>
