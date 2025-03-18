@@ -122,14 +122,14 @@ header p{
 /* Dois itens por linha */
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 10px); /* Mantém dois cartões por linha */
+        width: calc(50% - 150px); /* Mantém dois cartões por linha */
     }
 }
 
 /* Garante dois por linha mesmo em telas menores */
 @media (max-width: 480px) {
     .card {
-        width: calc(50% - 10px); /* Em vez de 33%, força dois cartões */
+        width: calc(50% - 50px); /* Em vez de 33%, força dois cartões */
     }
 }
 
